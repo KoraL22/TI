@@ -1,0 +1,138 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Corbel';
+}
+
+img{
+    width: 100px;
+}
+
+input[type=submit]{
+    background-color: #4b1a78;
+    border-radius: 9999px;
+    padding: 10px 20px 10px 20px;
+    border: none;
+    box-shadow: 5px 0px #4b1a78 ;
+    color: white;
+    width: 60px;
+    
+}
+
+nav{
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 800px) {
+    nav ul{
+        list-style-type: none;
+    }
+
+    nav ul:first-child{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    nav ul:nth-child(2) li{
+        display: none;
+    }
+
+    li a:hover{
+        background-color: blue;
+    }
+
+    nav ul:nth-child(1):hover li{
+        display: block;
+        background-color: white;
+        padding: 0;
+        position: relative;
+        top: 5px;
+        left: -40px;
+    }
+
+    a{
+        color: #333333;
+        text-decoration: none;
+        display: block;
+        text-transform: uppercase;
+        padding: 10px;
+    }
+
+}
+
+section:first-of-type {
+    display: grid;
+    grid-template-columns: 1fr 100px 100px 100px 1fr;
+    grid-template-rows: 1fr 1fr 1fr ;
+    justify-content: center;
+    vertical-align: middle;
+    text-align: center;
+    gap: 10px;
+    img:hover {
+        animation: rotate;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+    }
+}
+
+section:first-of-type h2{
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+
+section:first-of-type img{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+   
+}
+section:first-of-type img:nth-child(2){
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+   
+}
+section:first-of-type img:nth-child(3){
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    
+}
+
+section:first-of-type a{
+    grid-column-start: 3;
+    grid-column-end: 3;
+}
+
+@keyframes rotate {
+    
+    100% {transform:rotate(360deg);}
+}
+
+table{
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+    padding: 10px;
+}
+
+table td, th{
+    padding: 10px;
+    border: 1px solid black;
+}
+
+table td:nth-child(odd){
+    background-color: rgb(156, 255, 235);
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    
+}  

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miłosz Gierus 127758</title>
+    <link rel="stylesheet" href="main-styl.css">
+</head>
+<body>
+   
+<nav>
+        <ul>
+            <li><a href="#galeria">Galrtia</a></li>
+            <li><a href="#tabelka">Tabelka</a></li>  
+            <li><a href="#kategorie">Kategorie</a>
+                <ul>
+                    <li><a href="#kategorie_a">kategoria a</a></li>
+                    <li><a href="#kategorie_b">kategoria b</a></li>
+                    <li><a href="#kategorie_c">kategoria c</a></li>
+                </ul>
+            </li> 
+            <li><a href="#formularz">Formularz</a></li>
+            <li><a href="#lista">Lista</a></li>
+        </ul>
+    </nav>
+        <section>
+            <h2 id="galeria">Galeria</h2>
+            <img src="gal1.jpg" alt="zdj1">
+            <img src="gal2.jpg" alt="zdj2">
+            <img src="gal3.jpg" alt="zdj3">
+            
+            <a href="gallery.html">wiecej zdj</a>
+        </section>
+        <section>
+            <h2 id="tabelka">Tabelka</h2>
+            <table>
+                <tr>
+                    <th>Data</th>
+                    <th>typ zniżki</th>
+                    <th>cena</th>
+                    <th>cena ze zniżka</th>
+                </tr>
+                <tr>
+                    <td rowspan="3">20.12.2023</td>
+                    <td>typ1</td>
+                    <td>299</td>
+                    <td>152</td>
+                </tr>
+                <tr>
+                    <td>typ2</td>
+                    <td colspan="2" rowspan="2">299</td>
+                </tr>
+                <tr>
+                    <td>typ3</td>
+                </tr>
+                <tr><td colspan="4">2023</td></tr>
+            </table>
+        </section>
+        <section>
+            <h2 id="formularz">Formularz</h2>
+            <form action="formularz.php" method="post">
+                login: <input type="text" name="login" id="log" required>
+                hasło: <input type="password" name="haslo" id="pass" minlength="13">
+                liczba biletów: <input type="number" name="liczba" id="liczba_bilet" min="1"
+                max="20">
+                data: <input type="date" name="data" id="data">
+                typ biletu: <select name="lista" id="typ_bieltu">
+                    <option value="opcja1">bilet normalny</option>
+                    <option value="opcja2">typ1</option>
+                    <option value="opcja3" selected>typ2</option>
+                    <option value="opcja4">typ3</option>
+                </select>
+                <fieldset>
+                    <legend>płeć</legend>
+                        <input type="radio" name="plec" id="mez">mezczycna
+                        <input type="radio" name="plec" id="kob">kobieta
+                   
+                </fieldset>
+                <label>
+                <input type="checkbox" name="box" id="" checked disabled>regulamin<br>
+                <input type="checkbox" name="box" id="">chce otrzymać wiadmości z newslettera<br>           
+                <input type="checkbox" name="box" id="">chcę otrzymywać dedykowane oferty marketingowe
+                </label>
+                <input type="submit" value="wyslij" > 
+            </form>
+
+  
+        </section>
+
+    
+    
+</body>
+</html>
